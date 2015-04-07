@@ -16,6 +16,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".AdicionarActivity"
+            android:label="@string/title_activity_adicionar" >
+        </activity>
     </application>
 
 </manifest>
