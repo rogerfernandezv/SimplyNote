@@ -1,19 +1,39 @@
 package rogerdev.simplynote.br.simplynote;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ImageButton;
 
 
 public class MainActivity extends ActionBarActivity {
+
+    ImageButton ibtn_add;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        ibtn_add = (ImageButton) findViewById(R.id.ibtn_add);
+
+        ibtn_add.setOnClickListener( new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                addItem();
+            }
+        });
+
     }
 
+
+    public void addItem(){
+        Intent intent = new Intent(this, AdicionarActivity.class);
+        startActivity(intent);
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
