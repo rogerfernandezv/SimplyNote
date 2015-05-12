@@ -27,7 +27,7 @@
         <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/editText2"
+            android:id="@+id/txtTitulo"
             android:hint="Título"
             android:textStyle="bold"
             android:layout_gravity="center_horizontal"
@@ -48,7 +48,7 @@
             <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/editText"
+                android:id="@+id/txtAnotacao"
                 android:hint="Digite sua anotação aqui..." />
         </LinearLayout>
 
