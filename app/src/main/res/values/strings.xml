@@ -1,7 +1,9 @@
 <resources>
     <string name="app_name">SimplyNote</string>
 
-    <string name="hello_world">Simply Note</string>
+    <string name="hello_world">SimplyNote</string>
     <string name="action_excluir">Excluir</string>
-    <string name="title_activity_adicionar">AdicionarActivity</string>
+    <string name="title_activity_adicionar">Adicionar Anotação</string>
+    <string name="title_activity_atualizar">AtualizarActivity</string>
+    <string name="action_settings">Settings</string>
 </resources>

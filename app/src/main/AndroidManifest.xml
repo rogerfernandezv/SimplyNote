@@ -21,6 +21,10 @@
             android:name=".ui.AdicionarActivity"
             android:label="@string/title_activity_adicionar" >
         </activity>
+        <activity
+            android:name=".ui.AtualizarActivity"
+            android:label="@string/title_activity_atualizar" >
+        </activity>
     </application>
 
 </manifest>
