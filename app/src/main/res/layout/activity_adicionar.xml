@@ -7,53 +7,42 @@
     tools:context="rogerdev.simplynote.br.simplynote.ui.AdicionarActivity"
     android:orientation="vertical">
 
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+    <TextView android:text="@string/hello_world" android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="40sp"
+        android:textStyle="bold" />
 
-        <TextView android:text="@string/hello_world" android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="40sp"
-            android:textStyle="bold" />
-    </LinearLayout>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imgNote"
+        android:src="@drawable/note"
+        android:layout_marginTop="25dp"
+        android:tag = "imgnoteAdicionar"/>
 
-    <LinearLayout
-        android:orientation="vertical"
+    <EditText
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp">
+        android:id="@+id/txtTitulo"
+        android:hint="Título"
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal"
+        android:singleLine="true"
+        android:layout_marginTop="5dp" />
 
-        <EditText
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/txtTitulo"
-            android:hint="Título"
-            android:textStyle="bold"
-            android:layout_gravity="center_horizontal"
-            android:singleLine="true" />
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtAnotacao"
+        android:hint="Digite sua anotação aqui..."
+        android:linksClickable="false"
+        android:lines="3" />
 
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent">
-
-            <EditText
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/txtAnotacao"
-                android:hint="Digite sua anotação aqui..."
-                android:linksClickable="false"
-                android:lines="3" />
-        </LinearLayout>
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Adicionar"
-            android:id="@+id/btn_add"
-            android:layout_gravity="center_horizontal" />
-
-    </LinearLayout>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Adicionar"
+        android:id="@+id/btn_add"
+        android:layout_gravity="center_horizontal" />
 
 </LinearLayout>

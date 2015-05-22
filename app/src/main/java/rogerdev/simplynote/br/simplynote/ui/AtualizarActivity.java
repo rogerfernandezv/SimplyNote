@@ -1,6 +1,7 @@
 package rogerdev.simplynote.br.simplynote.ui;
 
 import android.content.Intent;
+import android.media.Image;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -8,6 +9,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 
 import rogerdev.simplynote.br.simplynote.R;
 import rogerdev.simplynote.br.simplynote.dao.AnotacaoDAO;
@@ -35,6 +37,7 @@ public class AtualizarActivity extends ActionBarActivity {
         Button btn_atualizar = (Button) findViewById(R.id.btn_atualizar);
         final EditText txtTitulo = (EditText) findViewById(R.id.txtTituloAtualizar);
         final EditText txtTexto = (EditText) findViewById(R.id.txtAnotacaoAtualizar);
+        final ImageView imgview = (ImageView) findViewById(R.id.imgNoteAtualizar);
 
         anotacaoAtualizar = AnotacaoDAO.getInstance().selectAnotacao(idAnotacao);
 
@@ -48,6 +51,7 @@ public class AtualizarActivity extends ActionBarActivity {
             public void onClick(View v) {
                 anotacaoAtualizar.setTextoAnotacao(txtTexto.getText().toString());
                 anotacaoAtualizar.setTituloAnotacao(txtTitulo.getText().toString());
+                anotacaoAtualizar.setImg_uri(imgview.getTag().toString());
                 AnotacaoDAO.getInstance().atualizarAnotacao(anotacaoAtualizar);
                 finish();
             }
